@@ -1,10 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        label 'centos7'
+    }
     stages {
         stage('Build') {
             steps {
-                python app/app.py
+            // One or more steps need to be included within the steps block.
+            echo "hello Pipeline"
             }
         }
-    }
+}
+
 }
