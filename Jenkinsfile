@@ -2,6 +2,9 @@ pipeline {
     agent {
         label 'centos7'
     }
+    triggers { 
+        pollSCM('* * * * *') 
+        }
     stages {
         stage('Build') {
             steps {
