@@ -2,6 +2,9 @@ pipeline {
     agent {
         label 'centos7'
     }
+    triggers {
+        cron('* * * * *')
+    }
     stages {
         stage('Build') {
             steps {
