@@ -1,7 +1,5 @@
 pipeline {
-    agent { 
-        node { label 'centos7' } 
-        }
+    agent any
     stages {
         stage('Build') {
             steps {
