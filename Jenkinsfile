@@ -1,11 +1,11 @@
 pipeline {
     agent { 
-        node { label 'java-docker-slave' } 
+        node { label 'centos7' } 
         }
     stages {
         stage('Build') {
             steps {
-                python app.py
+                python app/app.py
             }
         }
     }
