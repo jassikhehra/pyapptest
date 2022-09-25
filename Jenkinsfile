@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                python app/app.py
+                python app.py
             }
         }
     }
