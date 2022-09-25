@@ -17,9 +17,8 @@ pipeline {
         always {
             echo 'I will always say Hello again!'
             
-            emailext body: "${DEFAULT_CONTENT}",
-                recipientProviders: "${DEFAULT_RECIPIENTS}",
-                subject: "${DEFAULT_SUBJECT}"
+            emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
+            subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
             
         }
     }
