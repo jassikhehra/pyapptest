@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
             // One or more steps need to be included within the steps block.
-            echo "hello Pipeline"
+            sh 'python app/app.py'
             }
         }
 }
